@@ -24,7 +24,6 @@
 .list .card {
   margin-bottom: 20px;
   width: 12rem;
-  height: 500px;
   border-radius: 8px;
   box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
   transition: box-shadow 0.3s ease-in-out;
@@ -40,28 +39,15 @@
 
 .card .title-anime {
   font-size: 14px;
-  height: 100px;
 }
 
 .title {
   font-size: 48px;
   font-weight: 700;
-  margin-top: 50px;
 }
 
-.btn-detail {
-  bottom: 20px;
-  position: absolute;
-  width: 84%;
-}
-
-.card p {
-  font-size: 12px;
-  margin: 2px;
-}
 .list {
   gap: 28px;
-  height: 500px;
   display: flex;
   flex-wrap: wrap;
 }
@@ -86,67 +72,63 @@
 /* Detail */
 
 @media (max-width: 768px) {
-
-    /* Home */
-    .title {
-        margin-top: 10px;
-        font-size: 20px;
-    }
-    
-    .list {
-        padding: 0%;
-    }
-
-    .list .card {
-        width: 100px;
-        height: 190px;
-        padding: 0px;
-    }
-
-    .list .card .cover-img {
-        height: 140px;
-    }
-
-    .card .title-anime {
-        visibility: hidden;
-        font-size: 8px;
-        height: 50px;
-        margin-bottom: 5px;
-        padding: 0px;
-      }
-      .card p {
-        visibility: hidden;
-        font-size: 8px;
-      }
-
-      .btn-detail {
-        left: 7px;
-        bottom: 5px;
-        position: absolute;
-        width: 84%;
-        font-size: 10px;
-      }
-      /* Home */
-
-      /* Detail */
-
-      
-      .anime-detail .item {
-        position: absolute;
-        left: 10px;
-        top: 800px;
-        width: 95%;
-      }
-
-      .anime-detail .anime-image-detail{
-
-        width: 90vw;
-      }
-
-      .anime-detail .detail-title {
-
-        left: 10%;
-        top: 670px;
-      }
-      /* Detail */
+  /* Home */
+  /* .title {
+    margin-top: 10px;
+    font-size: 20px;
   }
+
+  .list {
+    padding: 0%;
+  }
+
+  .list .card {
+    width: 100px;
+    height: 190px;
+    padding: 0px;
+  }
+
+  .list .card .cover-img {
+    height: 140px;
+  }
+
+  .card .title-anime {
+    visibility: hidden;
+    font-size: 8px;
+    height: 50px;
+    margin-bottom: 5px;
+    padding: 0px;
+  }
+  .card p {
+    visibility: hidden;
+    font-size: 8px;
+  }
+
+  .btn-detail {
+    left: 7px;
+    bottom: 5px;
+    position: absolute;
+    width: 84%;
+    font-size: 10px;
+  } */
+  /* Home */
+
+  /* Detail */
+
+  /* .anime-detail .item {
+    position: absolute;
+    left: 10px;
+    top: 800px;
+    width: 95%;
+  }
+
+  .anime-detail .anime-image-detail {
+    width: 90vw;
+  }
+
+  .anime-detail .detail-title {
+    left: 10%;
+    top: 670px;
+  } */
+  /* Detail */
+}

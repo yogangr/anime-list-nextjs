@@ -11,7 +11,7 @@ export default function Home({ anime }) {
   const [query, setQuery] = useState([]);
 
   const handleSubmit = async () => {
-    const res = await fetch(`https://api.jikan.moe/v4/anime?q=${query}&sfw`);
+    const res = await fetch(`https://api.jikan.moe/v4/manga?q=${query}&sfw`);
     const { data } = await res.json();
     const search = data;
     const result = search.filter((post) =>
@@ -26,7 +26,7 @@ export default function Home({ anime }) {
       <div className="d-flex flex-wrap list">
         {search?.map((post, index) => (
           <Card style={{ width: "12rem" }} key={index}>
-            <Link href={`${post.mal_id}`}>
+            <Link href={`${post.mal_id}/full`}>
               <Card.Img
                 variant="top"
                 src={post.images.jpg.image_url}
@@ -56,11 +56,11 @@ export default function Home({ anime }) {
         </Button>
       </Form>
       <SearchList />
-      <div className="title">Top Rating Anime</div>
+      <div className="title">Top Rating Manga</div>
       <div className="my-2 list">
         {anime.map((post, index) => (
           <Card className="card" key={index}>
-            <Link href={`${post.mal_id}`}>
+            <Link href={`${post.mal_id}/full`}>
               <Card.Img
                 variant="top"
                 src={post.images.jpg.image_url}
@@ -78,7 +78,7 @@ export default function Home({ anime }) {
 }
 
 export async function getStaticProps() {
-  const res = await fetch("https://api.jikan.moe/v4/top/anime");
+  const res = await fetch("https://api.jikan.moe/v4/top/manga");
   const { data } = await res.json();
   const anime = data;
 

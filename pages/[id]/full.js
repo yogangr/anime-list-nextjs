@@ -9,6 +9,11 @@ function Detail({ anime }) {
       <span key={type.mal_id}> {type.name},</span>
     ));
   };
+  const renderAuthor = () => {
+    return anime.authors.map((type) => (
+      <span key={type.mal_id}>{type.name}</span>
+    ));
+  };
   return (
     <Layout>
       <div className="anime-detail my-4">
@@ -28,11 +33,10 @@ function Detail({ anime }) {
                 {anime.synopsis}
               </p>
               <p>Rating : {anime.score}</p>
-              <p>Duration : {anime.duration}</p>
-              <p>Source : {anime.source}</p>
-              <p>Episode : {anime.episodes}</p>
               <p>Status : {anime.status}</p>
+              <p>Type : {anime.type}</p>
               <p>Genre : {renderGenre()}</p>
+              <p>Authors : {renderAuthor()}</p>
             </Col>
           </Row>
         </Container>
@@ -45,7 +49,7 @@ export default Detail;
 
 export async function getServerSideProps(context) {
   const res = await fetch(
-    `https://api.jikan.moe/v4/anime/${context.params.id}`
+    `https://api.jikan.moe/v4/manga/${context.params.id}`
   );
   const { data } = await res.json();
   const anime = data;
