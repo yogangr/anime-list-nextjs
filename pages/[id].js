@@ -67,7 +67,7 @@ function Detail({ anime, char }) {
               style={{ width: "120px", height: "14rem" }}
               key={chara.character.mal_id}
             >
-              <Link href={`${chara.character.mal_id}/character`}>
+              <Link href={`characters/${chara.character.mal_id}`}>
                 <Card.Img
                   variant="top"
                   src={chara.character.images.jpg.image_url}
